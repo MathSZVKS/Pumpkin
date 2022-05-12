@@ -1,0 +1,22 @@
+@import '../../styles/variaveis.scss';
+
+.submit{
+    width: 50%;
+    height: 40px;
+    background-color: $primaryColor;
+    color: white;
+    border-radius: 12px;
+    font-size: 16px;
+    border: none;
+    margin-top: 20px;
+    margin: 0 auto;     
+    
+}
+
+.botao{
+    text-align: center
+}
+
+.msg{
+    margin-top: 20px;
+}

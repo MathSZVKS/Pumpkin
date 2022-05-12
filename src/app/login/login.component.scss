@@ -1,0 +1,100 @@
+@import '../../styles/variaveis.scss';
+
+.container-login{
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .containerImg{
+        max-width: 200px;
+        margin-bottom: 8%;
+    }
+
+    .submit{
+        width: 100%;
+        height: 40px;
+        background-color: $primaryColor;
+        color: white;
+        border-radius: 12px;
+        font-size: 16px;
+        border: none;
+        margin-top: 20px;
+
+        &:disabled{
+            opacity: 0.5;
+        }       
+    }
+
+    .text-error{
+        color: $errorColor;
+        font-size: 14px;
+    }
+
+    .input-container{
+        display: flex;
+        margin-top: 20px;
+
+        i{   
+            padding-right: 8px;
+            margin-top: 5px;
+        }
+
+        &:first-child {
+
+            i{
+                margin-top: 5px;
+            }
+        }
+
+        .app-input{
+            font-size: 16px;
+            color: $primaryColor;
+            border-width: 0;
+            border-bottom: 1px solid $greyColor;
+            background-color: $darkGreyColor;
+            outline: none;
+            
+            &:focus{
+                border-bottom-color: $primaryColor;
+            }
+
+            &::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder{
+                color: $greyColor;
+                opacity: 1;
+            }
+        }
+    }
+
+    @media screen and (min-width: $breakpointDesktop) {
+        display: flex;
+        flex-direction: row;
+
+        .containerImg{
+            max-width: 400px;
+            margin: 0;
+        }
+
+        form {
+            border: 1px solid $primaryColor;
+            padding: 80px 40px;
+            border-radius: 32px;
+            color: rgb(201, 201, 201);
+            background-color: rgb(39, 39, 39);
+            margin-left: 8%;
+
+            .input-container{
+                .app-input{
+                    width: 350px;
+                    background-color: rgb(39, 39, 39) ;
+                }
+            }
+
+            .submit{
+                margin-top: 30px;
+            }
+        }
+    }
+}
